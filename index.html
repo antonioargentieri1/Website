@@ -271,13 +271,15 @@
 
         .about-image {
             width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            color: #999;
+        }
+
+        .about-image img {
+            max-width: 360px;
+            max-height: 360px;
+            width: 360px;
         }
 
         /* Works Section */
@@ -297,6 +299,19 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
+            align-items: center;
+        }
+
+        /* Special layout for Steal Your Face with vertical image alignment */
+        .work-content.steal-your-face {
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+        }
+
+        .work-content.steal-your-face .work-images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             align-items: center;
         }
 
@@ -340,13 +355,15 @@
 
         .work-image {
             width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            color: #999;
+        }
+
+        .work-image img {
+            max-width: 360px;
+            max-height: 360px;
+            width: 360px;
         }
 
         /* Contact Section */
@@ -512,6 +529,17 @@
                 gap: 40px;
             }
 
+            .work-content.steal-your-face {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .work-content.steal-your-face .work-images {
+                flex-direction: row;
+                gap: 15px;
+                justify-content: center;
+            }
+
             .about-text h2,
             .works-content h2,
             .contact-content h2 {
@@ -530,22 +558,10 @@
                 width: 250px;
             }
 
-            .work-image img[src="hk.jpg"] {
-                max-width: 250px;
-                max-height: 250px;
-                width: 250px;
-            }
-
-            .work-image img[src="syf.jpg"] {
-                max-width: 250px;
-                max-height: 250px;
-                width: 250px;
-            }
-
-             .work-image img[src="syf2.jpg"] {
-                max-width: 250px;
-                max-height: 250px;
-                width: 250px;
+            .work-content.steal-your-face .work-images img {
+                max-width: 140px;
+                max-height: 180px;
+                width: 140px;
             }
 
             .wave-container {
@@ -616,7 +632,8 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="profile.jpeg" alt="Antonio Argentieri"  loading="lazy" style="max-width: 360px; max-height: 360px; width: 360px;">
+                    <img src="profile.jpeg" alt="Antonio Argentieri" loading="lazy" style="border-radius: 10px;" >
+
                 </div>
             </div>
         </div>
@@ -644,13 +661,35 @@
                         </div>
                     </div>
                     <div class="work-image">
-                        <img src="hk.jpg" alt="Hammerklavier" loading="lazy" style="max-width: 360px; max-height: 360px; width: 360px;">
+                        <img src="hk.jpg" alt="Hammerklavier" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Interplay -->
+                <div class="work-content" style="margin-top: 120px;">
+                    <div class="work-text">
+                        <h3>Interplay <span class="work-year">(2023)</span></h3>
+                        <p class="work-materials" data-en="Techniques and materials: webcams, hand tracking algorithm, machine learning, Max MSP, four speakers, interactive furniture" data-it="Tecniche e materiali: webcam, algoritmo di hand tracking, machine learning, Max MSP, quattro altoparlanti, mobilio interattivo">Techniques and materials: webcams, hand tracking algorithm, machine learning, Max MSP, four speakers, interactive furniture</p>
+                        <div class="work-description-en">
+                            <p>"Interplay" explores the concept of non-verbal communication in the absence of words, challenging visitors to improvise together and find coordinated movements that transform into music. The installation invites two strangers to sit face-to-face on specially designed chairs, where their hand gestures become the language for spontaneous musical creation.</p>
+                            <p>Through a sophisticated machine learning system, the installation transforms gestures and movements into music, interpreting the participants' non-verbal language and making human interaction concrete through sound. Two webcams capture the visitors' movements, and through a hand tracking algorithm, collect data on their hand positions. A trained machine learning algorithm precisely maps each gesture to specific sonic actions—tempo changes, harmonic shifts, scale selections, and rhythmic variations.</p>
+                            <p>The first visitor controls the harmonic aspects of the musical composition, with their movements analyzed to determine which notes and chords will create the musical atmosphere. The second visitor guides the rhythm of the improvisation, with their gestures influencing speed, tempo, and rhythmic structure. The furniture design reflects this duality: cylindrical forms represent harmony while cubic shapes embody rhythm, with a central table featuring complementary cutouts that symbolize their interconnection.</p>
+                            <p>This collaborative process creates a unique and unrepeatable composition born from silent cooperation between two people, demonstrating how collaboration, mutual listening, and empathy can overcome linguistic, cultural, and personal barriers to create bonds that transcend words.</p>
+                        </div>
+                        <div class="work-description-it hidden">
+                            <p>"Interplay" esplora il concetto di comunicazione non verbale in assenza di parole, sfidando i visitatori a improvvisare insieme e trovare movimenti coordinati che si trasformano in musica. L'installazione invita due estranei a sedersi faccia a faccia su sedie appositamente progettate, dove i loro gesti delle mani diventano il linguaggio per la creazione musicale spontanea.</p>
+                            <p>Attraverso un sofisticato sistema di machine learning, l'installazione trasforma gesti e movimenti in musica, interpretando il linguaggio non verbale dei partecipanti e rendendo concreta l'interazione umana attraverso il suono. Due webcam riprendono i movimenti dei visitatori e, tramite un algoritmo di hand tracking, raccolgono i dati della posizione delle loro mani. Un algoritmo di machine learning addestrato mappa con precisione ogni gesto ad azioni sonore specifiche—cambi di tempo, variazioni armoniche, selezioni di scale e variazioni ritmiche.</p>
+                            <p>Il primo visitatore controlla gli aspetti armonici della composizione musicale, con i suoi movimenti analizzati per determinare quali note e accordi creeranno l'atmosfera musicale. Il secondo visitatore guida il ritmo dell'improvvisazione, con i suoi gesti che influenzano velocità, tempo e struttura ritmica. Il design del mobilio riflette questa dualità: le forme cilindriche rappresentano l'armonia mentre le forme cubiche incarnano il ritmo, con un tavolo centrale che presenta intagli complementari che simboleggiano la loro interconnessione.</p>
+                            <p>Questo processo collaborativo crea una composizione unica e irripetibile nata dalla cooperazione silenziosa tra due persone, dimostrando come la collaborazione, l'ascolto reciproco e l'empatia possano superare barriere linguistiche, culturali e personali per creare legami che trascendono le parole.</p>
+                        </div>
+                    </div>
+                    <div class="work-image">
+                        <img src="interplay.jpg" alt="Interplay" loading="lazy">
                     </div>
                 </div>
 
                 <!-- Steal Your Face -->
-                <div class="work-content" style="margin-top: 120px;">
-                    
+                <div class="work-content steal-your-face" style="margin-top: 120px;">
                     <div class="work-text">
                         <h3>Steal Your Face <span class="work-year">(2022)</span></h3>
                         <p class="work-award" data-en="Finalist at the National Prize for Visual Arts 2022" data-it="Finalista al Premio Nazionale delle Arti Visive 2022">Finalist at the National Prize for Visual Arts 2022</p>
@@ -666,11 +705,9 @@
                             <p>Una videocamera, simile a quella di uno smartphone, scatta una foto al volto del visitatore non appena questi si avvicina ad essa. Successivamente, tramite algoritmi di Machine Learning, l'opera è in grado di ricavare dati dallo scatto (quali età, etnia, genere, stato d'animo). La foto viene salvata nel dataset contenente l'identità di tantissime altre persone. I dati vengono utilizzati dall'opera come input di algoritmi di sintesi video e audio per generare forme composte da decine di migliaia di cubi, contenenti altrettanti volti appartenenti alle identità già presenti nel dataset.</p>
                         </div>
                     </div>
-                    <div class="work-image">
-                        <img src="syf.jpg" alt="Steal Your Face" loading="lazy" style="max-width: 360px; max-height: 480px; width: 480px;">
-                    </div>
-                    <div class="work-image">
-                        <img src="syf2.PNG" alt="Steal Your Face" loading="lazy" style="max-width: 360px; max-height: 480px; width: 480px;">
+                    <div class="work-images">
+                        <img src="syf.jpg" alt="Steal Your Face" loading="lazy" style="max-width: 300px; max-height: 400px; width: 300px;">
+                        <img src="syf2.PNG" alt="Steal Your Face" loading="lazy" style="max-width: 300px; max-height: 400px; width: 300px;">
                     </div>
                 </div>
             </div>
