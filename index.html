@@ -522,19 +522,17 @@
                 padding: 60px 0;
             }
 
-            .about-image {
-                height: 300px;
-                max-width: 100%;
-            }
-
-            .work-image {
-                height: 300px;
-                max-width: 100%;
-            }
-
             .about-image img,
             .work-image img {
-                border-radius: 4px;
+                max-width: 120px;
+                max-height: 120px;
+                width: 120px;
+            }
+
+            .work-image img[src="hk.jpg"] {
+                max-width: 100px;
+                max-height: 100px;
+                width: 100px;
             }
 
             .wave-container {
@@ -633,7 +631,7 @@
                         </div>
                     </div>
                     <div class="work-image">
-                        <img src="hk.jpg" alt="Hammerklavier" loading="lazy">
+                        <img src="hk.jpg" alt="Hammerklavier" loading="lazy" style="max-width: 120px; max-height: 120px; width: 120px;">
                     </div>
                 </div>
 
