@@ -485,7 +485,161 @@
         }
 
         /* Mobile Styles */
-        @media (max-width: 768px) {
+        /* Aggiungi queste regole alla sezione Mobile Styles del tuo CSS esistente */
+/* Sostituisci la sezione @media (max-width: 768px) con questa versione aggiornata */
+
+@media (max-width: 768px) {
+    @keyframes typeWriter {
+        from {
+            width: 0;
+            opacity: 1;
+        }
+        to {
+            width: 280px;
+            opacity: 1;
+        }
+    }
+    
+    .hero-content .subtitle {
+        width: 280px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-shadow: 0.5px 0 0 currentColor;
+    }
+
+    .hero-content .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .work-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .work-content.steal-your-face {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .work-content.steal-your-face .work-images {
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .about-text h2,
+    .works-content h2,
+    .contact-content h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    /* OTTIMIZZAZIONI CONTAINER PER MOBILE */
+    .container {
+        padding: 0 8px; /* Margini minimi sui lati */
+    }
+
+    /* OTTIMIZZAZIONI IMMAGINI WORKS SECTION */
+    .work-image {
+        margin: 0 -8px; /* Espande fino ai bordi del container */
+        width: calc(100% + 16px); /* Compensa i margini negativi */
+    }
+
+    .work-image img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        border-radius: 0; /* Rimuove il border radius per occupare tutto lo spazio */
+        margin-bottom: 15px;
+    }
+
+    /* Per le sezioni con più immagini (Interplay e Steal Your Face) */
+    .work-image[style*="flex-direction: column"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px;
+        align-items: stretch;
+        margin: 0 -8px;
+        width: calc(100% + 16px);
+    }
+
+    .work-image[style*="flex-direction: column"] img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        border-radius: 0;
+    }
+
+    /* Mantieni le dimensioni esistenti per about-image */
+    .about-image {
+        margin: 0; /* Non estendere l'immagine profilo */
+    }
+
+    .about-image img {
+        max-width: 250px;
+        max-height: 250px;
+        width: 250px;
+        border-radius: 10px; /* Mantieni il border radius per l'immagine profilo */
+    }
+
+    .wave-container {
+        height: 150px;
+        opacity: 0.15;
+    }
+}
+
+/* OTTIMIZZAZIONI PER SCHERMI MOLTO PICCOLI */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 5px; /* Margini ancora più ridotti */
+    }
+
+    .work-image {
+        margin: 0 -5px; /* Si adatta ai margini ridotti del container */
+        width: calc(100% + 10px);
+    }
+
+    .work-image[style*="flex-direction: column"] {
+        margin: 0 -5px;
+        width: calc(100% + 10px);
+    }
+
+    .works-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .work-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .work-text p {
+        font-size: 0.85rem;
+    }
+
+    .work-content {
+        margin-bottom: 60px;
+    }
+}@media (max-width: 768px) {
             @keyframes typeWriter {
                 from {
                     width: 0;
