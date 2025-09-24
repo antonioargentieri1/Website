@@ -567,9 +567,11 @@
     .work-image img {
         width: 100%;
         max-width: none;
-        height: width;
+        height: auto; /* Mantiene le proporzioni originali */
+        object-fit: contain; /* Assicura che l'intera immagine sia visibile senza distorsioni */
         border-radius: 0; /* Rimuove il border radius per occupare tutto lo spazio */
         margin-bottom: 15px;
+        display: block; /* Elimina spazi bianchi sotto l'immagine */
     }
 
     /* Per le sezioni con più immagini (Interplay e Steal Your Face) */
