@@ -368,9 +368,17 @@
         }
         .music-links {
             margin-top: 20px;
-             font-size: 1rem;
-             line-height: 1.6;
-             font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 300;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .music-links-left {
+            display: flex;
+            align-items: center;
         }
 
         .music-links a {
@@ -389,11 +397,10 @@
         }
 
         /* Share functionality styles */
-        .share-section {
-            margin-top: 15px;
-            font-size: 1rem;
-            line-height: 1.6;
-            font-weight: 300;
+        .share-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .share-link {
@@ -405,6 +412,8 @@
             border: none;
             font: inherit;
             padding: 0;
+            font-size: 1rem;
+            font-weight: 300;
         }
 
         .share-link:hover {
@@ -412,23 +421,31 @@
         }
 
         .copy-notification {
-            position: fixed;
-            top: 20px;
-            right: 20px;
             background: #000;
             color: #fff;
-            padding: 15px 20px;
-            border-radius: 5px;
-            font-size: 14px;
-            z-index: 10000;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
             opacity: 0;
-            transform: translateY(-20px);
+            transform: translateX(10px);
             transition: all 0.3s ease;
+            white-space: nowrap;
         }
 
         .copy-notification.show {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
+        }
+
+        /* Styles for works without music links */
+        .share-section-only {
+            margin-top: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 300;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         /* Contact Section */
@@ -814,12 +831,17 @@
                             <p>At the core of Hammerklavier is a sophisticated computational approach: custom Wolfram Language algorithms are employed to deconstruct and recontextualize raw piano samples, generating intricate timbral mutations and gestural transformations. This algorithmic intervention allows for an organic evolution of sound, where the boundaries between the instrument's acoustic identity and its digitally abstracted counterpart become increasingly fluid.</p>
                             <p>The result is a dynamic, percussive soundscape that merges human intuition with machine-driven recomposition, offering a listening experience that is at once immersive and unpredictable. Rooted in the electroacoustic tradition, Hammerklavier engages deeply with questions of materiality and abstraction, exploring the tension between the tangible, physical properties of the piano and the intangible, ever-shifting sonic architectures created through digital processing.</p>
                             <div class="music-links">
-                                <span data-en="Listen:" data-it="Ascolta:">Listen:</span>
-                                <a href="https://open.spotify.com/intl-it/track/1ISvlD7ISfUVOuJvJNOZIa?si=78bfed2dd6ee42fe" data-en="Spotify" data-it="Spotify">Spotify</a>
-                                <a href="https://www.youtube.com/watch?v=ixNxX3ZA22g&list=OLAK5uy_lGuuXk_2swi0zYMD9O2VJEgYQjk1lmAK0&index=1" data-en="Youtube" data-it="Youtube">Youtube</a>
-                            </div>
-                            <div class="share-section">
-                                <button class="share-link" onclick="shareWork('hammerklavier')" data-en="Share" data-it="Condividi">Share</button>
+                                <div class="music-links-left">
+                                    <span data-en="Listen:" data-it="Ascolta:">Ascolta:</span>
+                                    <a href="https://open.spotify.com/intl-it/track/1ISvlD7ISfUVOuJvJNOZIa?si=78bfed2dd6ee42fe" data-en="Spotify" data-it="Spotify">Spotify</a>
+                                    <a href="https://www.youtube.com/watch?v=ixNxX3ZA22g&list=OLAK5uy_lGuuXk_2swi0zYMD9O2VJEgYQjk1lmAK0&index=1" data-en="Youtube" data-it="Youtube">Youtube</a>
+                                </div>
+                                <div class="share-container">
+                                    <button class="share-link" onclick="shareWork('hammerklavier')" data-en="Share" data-it="Condividi">Share</button>
+                                    <div class="copy-notification" id="copyNotification-hammerklavier">
+                                        <span data-en="Copied!" data-it="Copiato!">Copied!</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="work-description-it hidden">
@@ -851,8 +873,13 @@
                             <p>Through a sophisticated machine learning system, the installation transforms gestures and movements into music, interpreting the participants' non-verbal language and making human interaction concrete through sound. Two webcams capture the visitors' movements, and through a hand tracking algorithm, collect data on their hand positions. A trained machine learning algorithm precisely maps each gesture to specific sonic actions—tempo changes, harmonic shifts, scale selections, and rhythmic variations.</p>
                             <p>The first visitor controls the harmonic aspects of the musical composition, with their movements analyzed to determine which notes and chords will create the musical atmosphere. The second visitor guides the rhythm of the improvisation, with their gestures influencing speed, tempo, and rhythmic structure. The furniture design reflects this duality: cylindrical forms represent harmony while cubic shapes embody rhythm, with a central table featuring complementary cutouts that symbolize their interconnection.</p>
                             <p>This collaborative process creates a unique and unrepeatable composition born from silent cooperation between two people, demonstrating how collaboration, mutual listening, and empathy can overcome linguistic, cultural, and personal barriers to create bonds that transcend words.</p>
-                            <div class="share-section">
-                                <button class="share-link" onclick="shareWork('interplay')" data-en="Share" data-it="Condividi">Share</button>
+                            <div class="share-section-only">
+                                <div class="share-container">
+                                    <button class="share-link" onclick="shareWork('interplay')" data-en="Share" data-it="Condividi">Share</button>
+                                    <div class="copy-notification" id="copyNotification-interplay">
+                                        <span data-en="Copied!" data-it="Copiato!">Copied!</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="work-description-it hidden">
@@ -860,8 +887,13 @@
                             <p>Attraverso un sofisticato sistema di machine learning, l'installazione trasforma gesti e movimenti in musica, interpretando il linguaggio non verbale dei partecipanti e rendendo concreta l'interazione umana attraverso il suono. Due webcam riprendono i movimenti dei visitatori e, tramite un algoritmo di hand tracking, raccolgono i dati della posizione delle loro mani. Un algoritmo di machine learning addestrato mappa con precisione ogni gesto ad azioni sonore specifiche—cambi di tempo, variazioni armoniche, selezioni di scale e variazioni ritmiche.</p>
                             <p>Il primo visitatore controlla gli aspetti armonici della composizione musicale, con i suoi movimenti analizzati per determinare quali note e accordi creeranno l'atmosfera musicale. Il secondo visitatore guida il ritmo dell'improvvisazione, con i suoi gesti che influenzano velocità, tempo e struttura ritmica. Il design del mobilio riflette questa dualità: le forme cilindriche rappresentano l'armonia mentre le forme cubiche incarnano il ritmo, con un tavolo centrale che presenta intagli complementari che simboleggiano la loro interconnessione.</p>
                             <p>Questo processo collaborativo crea una composizione unica e irripetibile nata dalla cooperazione silenziosa tra due persone, dimostrando come la collaborazione, l'ascolto reciproco e l'empatia possano superare barriere linguistiche, culturali e personali per creare legami che trascendono le parole.</p>
-                            <div class="share-section">
-                                <button class="share-link" onclick="shareWork('interplay')" data-en="Share" data-it="Condividi">Condividi</button>
+                            <div class="share-section-only">
+                                <div class="share-container">
+                                    <button class="share-link" onclick="shareWork('interplay')" data-en="Share" data-it="Condividi">Condividi</button>
+                                    <div class="copy-notification" id="copyNotification-interplay">
+                                        <span data-en="Copied!" data-it="Copiato!">Copiato!</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -882,16 +914,26 @@
                             <p>"Steal Your Face" is an interactive installation that combines audio and video components. Based on Artificial Intelligence algorithms developed by Facebook and Google, the work was born from the desire to raise awareness about the problem of data usage.</p>
                             <p>Starting from the premise that the algorithms used by the installation are the same ones employed by social networks, the work aims to highlight how these mechanisms tend to objectify the individual, disregarding any subjective characteristics. Starting from an image, it's not possible to reconstruct a person's identity, but they can only be treated as a number or an element of a group.</p>
                             <p>A camera, similar to that of a smartphone, takes a photo of the visitor's face as soon as they approach it. Subsequently, through Machine Learning algorithms, the work is able to extract data from the shot (such as age, ethnicity, gender, mood). The photo is saved in the dataset containing the identity of many other people. The data is used by the work as input for video and audio synthesis algorithms to generate forms composed of tens of thousands of cubes, containing as many faces belonging to identities already present in the dataset.</p>
-                            <div class="share-section">
-                                <button class="share-link" onclick="shareWork('steal-your-face')" data-en="Share" data-it="Condividi">Share</button>
+                            <div class="share-section-only">
+                                <div class="share-container">
+                                    <button class="share-link" onclick="shareWork('steal-your-face')" data-en="Share" data-it="Condividi">Share</button>
+                                    <div class="copy-notification" id="copyNotification-steal-your-face">
+                                        <span data-en="Copied!" data-it="Copiato!">Copied!</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="work-description-it hidden">
                             <p>"Steal Your Face" è un'opera interattiva che unisce componenti audio e video. Il lavoro, basato su algoritmi di Intelligenza Artificiale sviluppati da Facebook e Google, è nato dalla volontà di sensibilizzare il fruitore sul problema dell'utilizzo dei dati.</p>
                             <p>Partendo dal presupposto che gli algoritmi utilizzati dall'installazione sono gli stessi impiegati dai social network, l'opera vuole evidenziare come tali meccanismi tendono a oggettivizzare l'individuo disinteressandosi di ogni caratteristica soggettiva. Partendo da un'immagine non è possibile ricostruire l'identità di una persona, ma la si può trattare solo come un numero o un elemento di un gruppo.</p>
                             <p>Una videocamera, simile a quella di uno smartphone, scatta una foto al volto del visitatore non appena questi si avvicina ad essa. Successivamente, tramite algoritmi di Machine Learning, l'opera è in grado di ricavare dati dallo scatto (quali età, etnia, genere, stato d'animo). La foto viene salvata nel dataset contenente l'identità di tantissime altre persone. I dati vengono utilizzati dall'opera come input di algoritmi di sintesi video e audio per generare forme composte da decine di migliaia di cubi, contenenti altrettanti volti appartenenti alle identità già presenti nel dataset.</p>
-                            <div class="share-section">
-                                <button class="share-link" onclick="shareWork('steal-your-face')" data-en="Share" data-it="Condividi">Condividi</button>
+                            <div class="share-section-only">
+                                <div class="share-container">
+                                    <button class="share-link" onclick="shareWork('steal-your-face')" data-en="Share" data-it="Condividi">Condividi</button>
+                                    <div class="copy-notification" id="copyNotification-steal-your-face">
+                                        <span data-en="Copied!" data-it="Copiato!">Copiato!</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -929,7 +971,7 @@
             const shareUrl = `${currentUrl}#${workId}`;
             
             navigator.clipboard.writeText(shareUrl).then(function() {
-                showNotification();
+                showNotification(workId);
             }).catch(function(err) {
                 console.error('Could not copy text: ', err);
                 // Fallback for older browsers
@@ -940,7 +982,7 @@
                 textArea.select();
                 try {
                     document.execCommand('copy');
-                    showNotification();
+                    showNotification(workId);
                 } catch (err) {
                     console.error('Fallback: Could not copy text: ', err);
                 }
@@ -948,13 +990,13 @@
             });
         }
 
-        function showNotification() {
-            const notification = document.getElementById('copyNotification');
+        function showNotification(workId) {
+            const notification = document.getElementById(`copyNotification-${workId}`);
             notification.classList.add('show');
             
             setTimeout(() => {
                 notification.classList.remove('show');
-            }, 3000);
+            }, 2000);
         }
 
         // Wave animation with FM synthesis
