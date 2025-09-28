@@ -588,6 +588,45 @@
         /* Aggiungi queste regole alla sezione Mobile Styles del tuo CSS esistente */
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .nav-container {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 16px;
+        letter-spacing: 1px;
+        flex-shrink: 0;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .mobile-menu span {
+        width: 20px;
+        height: 2px;
+        background: #000;
+        margin: 2px 0;
+        transition: 0.3s;
+    }
+
+    .language-switch {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
     @keyframes typeWriter {
         from {
             width: 0;
@@ -601,15 +640,22 @@
     
     .hero-content .subtitle {
         width: 280px;
+        font-size: 1.1rem;
     }
 
-    .nav-menu {
-        display: none;
+    .hero-content h1 {
+        font-size: 2.2rem;
+        letter-spacing: 4px;
+        margin-bottom: 15px;
     }
 
-    .mobile-menu {
-        display: flex;
+    /* Mantieni tutto il resto del tuo codice mobile esistente */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
+    
+
 
     .hero-content h1 {
         font-size: 2.5rem;
