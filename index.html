@@ -1141,15 +1141,24 @@
                 const targetElement = document.querySelector(hash);
                 if (targetElement) {
                     setTimeout(() => {
-                        // Calculate offset to show the title
-                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                        const elementPosition = targetElement.offsetTop;
-                        const offsetPosition = elementPosition - navbarHeight - 80; // 80px above to show title properly
-                        
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
+                        // Only apply custom scroll behavior on desktop (screens wider than 768px)
+                        if (window.innerWidth > 768) {
+                            // Calculate offset to show the title
+                            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                            const elementPosition = targetElement.offsetTop;
+                            const offsetPosition = elementPosition - navbarHeight - 80; // 80px above to show title properly
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                        } else {
+                            // Use default scroll behavior on mobile
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
                     }, 100);
                 }
             }
