@@ -832,7 +832,7 @@
                             <p>The result is a dynamic, percussive soundscape that merges human intuition with machine-driven recomposition, offering a listening experience that is at once immersive and unpredictable. Rooted in the electroacoustic tradition, Hammerklavier engages deeply with questions of materiality and abstraction, exploring the tension between the tangible, physical properties of the piano and the intangible, ever-shifting sonic architectures created through digital processing.</p>
                             <div class="music-links">
                                 <div class="music-links-left">
-                                    <span data-en="Listen:" data-it="Ascolta:">Ascolta:</span>
+                                    <span data-en="Listen:" data-it="Ascolta:">Listen:</span>
                                     <a href="https://open.spotify.com/intl-it/track/1ISvlD7ISfUVOuJvJNOZIa?si=78bfed2dd6ee42fe" data-en="Spotify" data-it="Spotify">Spotify</a>
                                     <a href="https://www.youtube.com/watch?v=ixNxX3ZA22g&list=OLAK5uy_lGuuXk_2swi0zYMD9O2VJEgYQjk1lmAK0&index=1" data-en="Youtube" data-it="Youtube">Youtube</a>
                                 </div>
@@ -1141,9 +1141,14 @@
                 const targetElement = document.querySelector(hash);
                 if (targetElement) {
                     setTimeout(() => {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
+                        // Calculate offset to show the title
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const elementPosition = targetElement.offsetTop;
+                        const offsetPosition = elementPosition - navbarHeight - 50; // Extra 50px to show title properly
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
                         });
                     }, 100);
                 }
