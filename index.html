@@ -475,8 +475,75 @@
             align-items: center;
         }
 
+        /* Research Section */
+        .research {
+            background: #fff;
+        }
+
+        .research-content h2 {
+            font-size: 3rem;
+            margin-bottom: 60px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-align: left;
+        }
+
+        .research-item {
+            border-top: 1px solid #eee;
+            padding-top: 40px;
+            max-width: 760px;
+        }
+
+        .research-venue {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .research-item h3 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .research-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 300;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .research-authors {
+            font-size: 1rem;
+            font-weight: 300;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .research-button {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 2px solid #000;
+            color: #000;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .research-button:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
         /* Contact Section */
-        
+
         .contact {
             background: #000;
             color: #fff;
@@ -900,6 +967,7 @@
                     <li><a href="#home" class="nav-link" data-en="Home" data-it="Home">Home</a></li>
                     <li><a href="#about" class="nav-link" data-en="About" data-it="Chi Sono">About</a></li>
                     <li><a href="#works" class="nav-link" data-en="Works" data-it="Opere">Works</a></li>
+                    <li><a href="#research" class="nav-link" data-en="Research" data-it="Ricerca">Research</a></li>
                     <li><a href="#contact" class="nav-link" data-en="Contact" data-it="Contatti">Contact</a></li>
                     <li><button class="language-switch" onclick="toggleLanguage()">IT / EN</button></li>
                 </ul>
@@ -1103,6 +1171,22 @@
                      
                         <img src="syf2.PNG" alt="Steal Your Face" loading="lazy" style="max-width: 360px; max-height: 400px; width: 360px;">
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section class="section research" id="research">
+        <div class="container">
+            <div class="research-content">
+                <h2 class="research-title" data-en="Research" data-it="Ricerca">Research</h2>
+                <div class="research-item">
+                    <p class="research-venue" data-en="Accepted at DAFx 2026 — International Conference on Digital Audio Effects" data-it="Accettato a DAFx 2026 — International Conference on Digital Audio Effects">Accepted at DAFx 2026 — International Conference on Digital Audio Effects</p>
+                    <h3>Arbitrary Polygon Oscillator</h3>
+                    <p class="research-subtitle" data-en="Generalizing Polygonal Synthesis to Arbitrary Shapes, Morphing, and Three-Dimensional Polyhedra" data-it="Generalizzazione della sintesi poligonale a forme arbitrarie, morphing e poliedri tridimensionali">Generalizing Polygonal Synthesis to Arbitrary Shapes, Morphing, and Three-Dimensional Polyhedra</p>
+                    <p class="research-authors">Antonio Argentieri, Francesco Scagliola</p>
+                    <a href="polygon_demo/" class="research-button" target="_blank" data-en="Listen to the audio examples" data-it="Ascolta gli esempi audio">Listen to the audio examples</a>
                 </div>
             </div>
         </div>
