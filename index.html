@@ -169,6 +169,8 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 75vh;
+            padding: 120px 0 70px;
         }
 
         .section.home::before {
@@ -190,7 +192,7 @@
             width: 100%;
             height: 200px;
             z-index: 1;
-            opacity: 0.1;
+            opacity: 0.06;
         }
 
         .wave-canvas {
@@ -204,10 +206,10 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            margin-bottom: 14px;
             font-weight: 400;
-            letter-spacing: 8px;
+            letter-spacing: 5px;
             opacity: 0;
             animation: glitchIn 1s ease .3s forwards;
             position: relative;
@@ -226,8 +228,8 @@
         }
 
         .hero-content .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
+            font-size: 1.2rem;
+            margin-bottom: 32px;
             font-weight: 300;
             opacity: 0;
             animation: typeWriter 2.5s ease .5s forwards, blinkCursor 0.8s infinite 1.5s, hideCursor 0.1s ease 4.2s forwards;
@@ -235,7 +237,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 0;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 32px auto;
         }
 
         .cta-button {
@@ -1226,7 +1228,7 @@
                 ctx.beginPath();
 
                 const centerY = canvas.height / 2;
-                const amplitude = 50;
+                const amplitude = 32;
                 const carrierFreq = 0.03;
                 const modulatorFreq = 0.05;
                 const modulationDepth = 0.005;
