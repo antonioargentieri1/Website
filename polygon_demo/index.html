@@ -230,8 +230,14 @@
     footer a:hover { text-decoration: underline; }
     footer .doi { margin-top: .4rem; font-family: 'Courier New', monospace; font-size: .75rem; }
   </style>
+<link rel="icon" href="../favicon-96x96.png">
+<link rel="stylesheet" href="../assets/companion.css">
+<script src="../assets/companion.js" defer></script>
+  <link rel="canonical" href="https://www.antonioargentieri.com/polygon_demo/">
+  <meta property="og:url" content="https://www.antonioargentieri.com/polygon_demo/">
 </head>
 <body>
+<nav class="companion-nav" aria-label="Page navigation"><a href="../index.html#research">Antonio Argentieri · Research</a><div class="companion-toc"><a href="#static-shapes">Static shapes</a><a href="#morphing">Morphing</a><a href="#curvature">Curvature</a><a href="#spectral">Spectra</a><a href="#polyhedra">3D polyhedra</a></div></nav>
 
 <header>
   <div class="label">DAFx 2026 · Companion Page</div>
@@ -242,6 +248,7 @@
   </p>
   <p class="authors">Antonio Argentieri &middot; Francesco Scagliola</p>
   <div class="venue">Audio Examples — POLYgon Synthesis Demo</div>
+  <p class="venue"><a href="https://dafx26.mit.edu/" target="_blank" rel="noopener noreferrer">DAFx 2026 — 29th International Conference on Digital Audio Effects</a><br>Cambridge, Massachusetts, USA · 1–4 September 2026</p>
 </header>
 
 <div class="container">
@@ -257,13 +264,7 @@
   <!-- ── Section 1: Static shapes ─────────────────────────────────── -->
   <section id="static-shapes">
     <h2>1 · Static Polygon Shapes</h2>
-    <p class="section-desc">
-      Each example demonstrates the oscillator driven by a fixed polygon shape at a constant
-      fundamental frequency. The spectral character reflects the rotational symmetry of the shape:
-      an <em>n</em>-sided regular polygon emphasises harmonic partials at multiples of
-      <em>nf</em><sub>0</sub>, while irregular and concave polygons break this symmetry,
-      introducing additional spectral components.
-    </p>
+    <p class="section-desc">Each example demonstrates the oscillator driven by a fixed polygon at a constant fundamental frequency. Rotational symmetry determines the families of active harmonics, as described below. Symmetry-breaking deformations can introduce additional components; concavity can also change their relative amplitudes without breaking rotational symmetry.</p>
 
     <div class="shape-grid">
 
@@ -272,8 +273,8 @@
         <h3>Equilateral Triangle</h3>
         <p>Three equal sides and angles. 3-fold rotational symmetry concentrates energy at
         harmonics 3<em>m</em> ± 1.</p>
-        <img class="spectrogram" src="Graphs/triangle_equilateral.png" alt="spectrogram">
-        <audio controls src="triangle_equilateral.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/triangle_equilateral.png" alt="spectrogram">
+        <audio controls preload="none" src="triangle_equilateral.wav"></audio>
       </div>
 
       <div class="card">
@@ -282,8 +283,8 @@
         <p>Three vertices with unequal side lengths. The broken symmetry destroys the spectral
         regularity of the equilateral case, introducing additional harmonic components and
         yielding a timbre with a richer, less periodic spectral envelope.</p>
-        <img class="spectrogram" src="Graphs/triangle_scalene.png" alt="spectrogram">
-        <audio controls src="triangle_scalene.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/triangle_scalene.png" alt="spectrogram">
+        <audio controls preload="none" src="triangle_scalene.wav"></audio>
       </div>
 
       <div class="card">
@@ -291,8 +292,8 @@
         <h3>Square</h3>
         <p>Four equal sides. 4-fold symmetry places spectral energy at harmonics
         4<em>m</em> ± 1.</p>
-        <img class="spectrogram" src="Graphs/square.png" alt="spectrogram">
-        <audio controls src="square.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/square.png" alt="spectrogram">
+        <audio controls preload="none" src="square.wav"></audio>
       </div>
 
       <div class="card">
@@ -300,8 +301,8 @@
         <h3>Pentagon</h3>
         <p>Five equal sides. 5-fold symmetry shifts spectral emphasis to harmonics
         5<em>m</em> ± 1.</p>
-        <img class="spectrogram" src="Graphs/pentagon.png" alt="spectrogram">
-        <audio controls src="pentagon.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/pentagon.png" alt="spectrogram">
+        <audio controls preload="none" src="pentagon.wav"></audio>
       </div>
 
       <div class="card">
@@ -312,8 +313,8 @@
         order M increases, the harmonic lattice becomes progressively <em>sparser</em> —
         harmonics present at lower M are suppressed — and the waveform converges toward a
         sinusoid.</p>
-        <img class="spectrogram" src="Graphs/hexagon.png" alt="spectrogram">
-        <audio controls src="hexagon.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/hexagon.png" alt="spectrogram">
+        <audio controls preload="none" src="hexagon.wav"></audio>
       </div>
 
       <div class="card">
@@ -321,8 +322,8 @@
         <h3>Heptagon</h3>
         <p>Seven equal sides. 7-fold symmetry places energy at harmonics
         7<em>m</em> ± 1.</p>
-        <img class="spectrogram" src="Graphs/heptagon.png" alt="spectrogram">
-        <audio controls src="heptagon.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/heptagon.png" alt="spectrogram">
+        <audio controls preload="none" src="heptagon.wav"></audio>
       </div>
 
       <div class="card">
@@ -330,8 +331,8 @@
         <h3>Octagon</h3>
         <p>Eight equal sides. 8-fold symmetry places harmonic energy at
         8<em>m</em> ± 1: {1, 7, 9, 15, 17, …}<em>f</em><sub>0</sub>.</p>
-        <img class="spectrogram" src="Graphs/octagon.png" alt="spectrogram">
-        <audio controls src="octagon.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/octagon.png" alt="spectrogram">
+        <audio controls preload="none" src="octagon.wav"></audio>
       </div>
 
       <div class="card">
@@ -341,8 +342,8 @@
             H(5,2) =  {(5<em>m</em> ± 2)<em>f</em><sub>0</sub>}. A self-intersecting star traversed exactly as drawn: the oscillator follows the
             supplied vertex sequence along its self-crossing path.
         </p>
-        <img class="spectrogram" src="Graphs/star_s_i.png" alt="spectrogram">
-        <audio controls src="star_s_i.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/star_s_i.png" alt="spectrogram">
+        <audio controls preload="none" src="star_s_i.wav"></audio>
       </div>
 
       <div class="card">
@@ -356,8 +357,8 @@
         control the <em>relative amplitudes</em> within that lattice, concentrating energy
         toward the upper harmonics and producing the characteristically bright, cutting timbre
         of star polygons.</p>
-        <img class="spectrogram" src="Graphs/star_ten_v.png" alt="spectrogram">
-        <audio controls src="star_ten_v.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/star_ten_v.png" alt="spectrogram">
+        <audio controls preload="none" src="star_ten_v.wav"></audio>
       </div>
 
     </div>
@@ -388,8 +389,8 @@
                 H(4); harmonics exclusive to either endpoint fade or emerge while the fundamental
                 stays fixed at <em>f</em><sub>0</sub>.
             </p>
-            <img class="spectrogram" src="Graphs/triangleTosquare.png" alt="spectrogram">
-            <audio controls src="triangleTosquare.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/triangleTosquare.png" alt="spectrogram">
+            <audio controls preload="none" src="triangleTosquare.wav"></audio>
         </div>
 
         <div class="morph-card">
@@ -402,8 +403,8 @@
                 odd-harmonic lattice H(4) = {1, 3, 5, 7, …}<em>f</em><sub>0</sub> to the pentagon's
                 H(5) = {1, 4, 6, 9, 11, …}<em>f</em><sub>0</sub>.
             </p>
-            <img class="spectrogram" src="Graphs/squareTopentagon.png" alt="spectrogram">
-            <audio controls src="squareTopentagon.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/squareTopentagon.png" alt="spectrogram">
+            <audio controls preload="none" src="squareTopentagon.wav"></audio>
         </div>
 
         <div class="morph-card">
@@ -417,8 +418,8 @@
                 than densifies, with harmonics at positions 4 and 9 fading as those at 5 and 13 emerge.
                 The result is a smooth timbral navigation across adjacent symmetry orders.
             </p>
-            <img class="spectrogram" src="Graphs/pentagonTohexagon.png" alt="spectrogram">
-            <audio controls src="pentagonTohexagon.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/pentagonTohexagon.png" alt="spectrogram">
+            <audio controls preload="none" src="pentagonTohexagon.wav"></audio>
         </div>
 
         <div class="morph-card">
@@ -430,15 +431,15 @@
                 sleeping vertices are inserted at edge midpoints and separate as the morph proceeds. The
                 timbral evolution includes a rapid spectral enrichment as concavity develops from midpoints.
             </p>
-            <img class="spectrogram" src="Graphs/triangleTostar.png" alt="spectrogram">
-            <audio controls src="triangleTostar.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/triangleTostar.png" alt="spectrogram">
+            <audio controls preload="none" src="triangleTostar.wav"></audio>
         </div>
 
         <div class="morph-card">
             <div class="ex-id">EX-14 · Morphing</div>
             <h3>Six Polygons Sequence</h3>
-            <img class="spectrogram" src="Graphs/fig_morph_sequence_preview.png" alt="six polygons sequence morph strip">
-            <audio controls src="6PolygonsSeqs.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/fig_morph_sequence_preview.png" alt="six polygons sequence morph strip">
+            <audio controls preload="none" src="6PolygonsSeqs.wav"></audio>
         </div>
 
         <div class="morph-card">
@@ -451,8 +452,8 @@
                 midpoints — never at the self-crossing points — and the drawn vertex order is preserved
                 on both sides.
             </p>
-            <img class="spectrogram" src="Graphs/star10vTostar_s_i.png" alt="spectrogram">
-            <audio controls src="star10vTostar_s_i.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/star10vTostar_s_i.png" alt="spectrogram">
+            <audio controls preload="none" src="star10vTostar_s_i.wav"></audio>
         </div>
 
         <div class="morph-card">
@@ -468,8 +469,8 @@
                 The rectangle's destination lattice H(2) and the square's H(4) are <em>identical</em> — both equal {odd}f₀, since 4m±1 already covers
                 every odd integer.
             </p>
-            <img class="spectrogram" src="Graphs/triangleTorectangle.png" alt="spectrogram">
-            <audio controls src="triangleTorectangle.wav"></audio>
+            <img loading="lazy" class="spectrogram" src="Graphs/triangleTorectangle.png" alt="spectrogram">
+            <audio controls preload="none" src="triangleTorectangle.wav"></audio>
         </div>
     </div>
   </section>
@@ -491,10 +492,10 @@
       illustration of how convex and concave shapes differ timbrally at a fixed vertex count.
     </p>
 
-    <img class="compare-fig" src="Graphs/octagon_shapes.png"
+    <img loading="lazy" class="compare-fig" src="Graphs/octagon_shapes.png"
          alt="The same regular octagon rendered at three edge-curvature settings: straight (κ = 0), concave (κ = +1), and rounded (κ = −0.44). All three share the same eight vertices; only the edges bow inward or outward.">
 
-    <img class="compare-fig" src="Graphs/octagon_curvature.png"
+    <img loading="lazy" class="compare-fig" src="Graphs/octagon_curvature.png"
          alt="Harmonic magnitude comparison across the three edge-curvature settings; the fundamental is the common reference and the upper 8m±1 harmonics rise with concavity.">
 
     <div class="shape-grid">
@@ -505,8 +506,8 @@
         <p>The reference regular octagon with straight edges. Harmonic energy sits at
         8<em>m</em> ± 1 with a moderate upper-partial roll-off — the baseline against which
         the two curved variants are compared.</p>
-        <img class="spectrogram" src="Graphs/octagon_k0.png" alt="spectrogram">
-        <audio controls src="octagon_k0.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/octagon_k0.png" alt="spectrogram">
+        <audio controls preload="none" src="octagon_k0.wav"></audio>
       </div>
 
       <div class="card">
@@ -515,8 +516,8 @@
         <p>Edges bowed inward (re-entrant sides). The harmonic positions are unchanged, but the
         upper partials (7, 9, 15, 17) rise by roughly 12 dB relative to the fundamental,
         producing a brighter, sharper, more buzzing timbre.</p>
-        <img class="spectrogram" src="Graphs/octagon_kp1.png" alt="spectrogram">
-        <audio controls src="octagon_kp1.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/octagon_kp1.png" alt="spectrogram">
+        <audio controls preload="none" src="octagon_kp1.wav"></audio>
       </div>
 
       <div class="card">
@@ -525,8 +526,8 @@
         <p>Edges bowed outward until the octagon approximates a circle. The upper partials are
         strongly suppressed (harmonic 17 essentially vanishes) and the tone approaches a pure
         sine — the rounder, more flute-like end of the curvature range.</p>
-        <img class="spectrogram" src="Graphs/octagon_km044.png" alt="spectrogram">
-        <audio controls src="octagon_km044.wav"></audio>
+        <img loading="lazy" class="spectrogram" src="Graphs/octagon_km044.png" alt="spectrogram">
+        <audio controls preload="none" src="octagon_km044.wav"></audio>
       </div>
 
     </div>
@@ -547,7 +548,7 @@
       Pentagon → Gear → Star 10v → Pinwheel 10v.
     </p>
 
-    <img class="compare-fig" src="Graphs/spectral_characterization_M5.png"
+    <img loading="lazy" class="compare-fig" src="Graphs/spectral_characterization_M5.png"
          alt="Harmonic magnitude spectra for four M=5 shapes — pentagon (5v, convex), five-pointed star (10v, concave), pinwheel (10v, fan), gear (15v, teeth) — all sharing the same lattice H(5)={(5m±1)f₀}. Harmonics outside the lattice fall below −80 dB regardless of vertex count. f₀=440 Hz, fs=48 kHz.">
 
     <div class="shape-grid">
@@ -558,7 +559,7 @@
         <p>Regular convex polygon, 5 vertices. Five smooth corners, no re-entrant angles:
         energy within the lattice H(5) = {(5<em>m</em> ± 1)<em>f</em><sub>0</sub>}
         </p>
-        <audio controls src="pentagon.wav"></audio>
+        <audio controls preload="none" src="pentagon.wav"></audio>
       </div>
 
       <div class="card">
@@ -569,7 +570,7 @@
         the 5-fold rotational symmetry gives M = 5: harmonic energy falls on the same
         lattice H(5) as the pentagon. The concave geometry raises the upper partials.
         </p>
-        <audio controls src="star_ten_v.wav"></audio>
+        <audio controls preload="none" src="star_ten_v.wav"></audio>
       </div>
 
       <div class="card">
@@ -577,7 +578,7 @@
         <h3>Pinwheel — 10 Vertices <span class="tag">N = 10 · M = 5</span></h3>
         <p>Fan-shaped pinwheel, 10 vertices, M = 5: same harmonic lattice H(5) as the
         three shapes above.</p>
-        <audio controls src="Pinwheel_10vs.wav"></audio>
+        <audio controls preload="none" src="Pinwheel_10vs.wav"></audio>
       </div>
 
       <div class="card">
@@ -585,7 +586,7 @@
         <h3>Gear — 15 Vertices <span class="tag">N = 15 · M = 5</span></h3>
         <p>Gear-like shape, M = 5: the same harmonic lattice H(5) applies.
         </p>
-        <audio controls src="Gear_15vs.wav"></audio>
+        <audio controls preload="none" src="Gear_15vs.wav"></audio>
       </div>
 
     </div>
@@ -613,7 +614,7 @@
         (Fig. 5). The cross-section sweeps from a square toward a near-regular hexagon, the vertex
         count moving between 4 and 6 as the plane crosses the cube's edges. The harmonic content
         shifts continuously from the 4-fold square spectrum toward the irregular hexagon one.</p>
-        <audio controls src="cube_rotx_roty_range_0_40s.wav"></audio>
+        <audio controls preload="none" src="cube_rotx_roty_range_0_40s.wav"></audio>
       </div>
 
       <div class="card">
@@ -623,7 +624,7 @@
         evolves continuously and passes through topological transitions where the cutting plane crosses
         the cube's vertices and edges (Section 5.3) — each heard as a point of articulation within an
         otherwise smooth timbral sweep, with the harmonic complexity growing and receding.</p>
-        <audio controls src="cube_rotx_range_0_90s.wav"></audio>
+        <audio controls preload="none" src="cube_rotx_range_0_90s.wav"></audio>
       </div>
 
       <div class="card">
@@ -633,7 +634,7 @@
         (Section 5.4). As the apex enters the cross-section the shape passes through irregular
         quadrilaterals and the vertex count reduces from 4 to 3, producing a continuous shift from a
         square-like to a triangular harmonic spectrum.</p>
-        <audio controls src="pyramid_rotx_range_0_90s.wav"></audio>
+        <audio controls preload="none" src="pyramid_rotx_range_0_90s.wav"></audio>
       </div>
 
     </div>
@@ -644,11 +645,12 @@
 <footer>
   <p>
     <strong>Source code (Max/RNBO patch):</strong>
-    <a href="https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator" target="_blank">
+    <a href="https://github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator" target="_blank" rel="noopener noreferrer">
       github.com/antonioargentieri1/Arbitrary_Polygon_Oscillator
     </a>
   </p>
   <p class="doi">Audio examples — DAFx 2026 · Antonio Argentieri &middot; Francesco Scagliola</p>
+<a class="back-link" href="../index.html#research">Back to Antonio Argentieri’s website</a>
 </footer>
 
 </body>
